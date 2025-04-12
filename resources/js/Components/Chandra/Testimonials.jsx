@@ -8,14 +8,14 @@ const Testimonials = () => {
   
   const testimonials = [
     {
-      text: "Kualitas batu alam dari PT. Chandra Putra Putri benar-benar premium. Proyek rumah kami terlihat sangat mewah dan elegan berkat sentuhan batu andesit pada bagian fasad.",
+      text: "Kualitas batu alam dari PT. Steven Cahaya SuksesIndo benar-benar premium. Proyek rumah kami terlihat sangat mewah dan elegan berkat sentuhan batu andesit pada bagian fasad.",
       name: "Budi Santoso",
       position: "Arsitek, Jakarta",
       rating: 5,
       image: null
     },
     {
-      text: "Sangat puas dengan layanan dan produk dari PT. Chandra Putra Putri. Batu alam yang kami pesan untuk dinding belakang taman kami memberikan nuansa alami yang luar biasa.",
+      text: "Sangat puas dengan layanan dan produk dari PT. Steven Cahaya SuksesIndo. Batu alam yang kami pesan untuk dinding belakang taman kami memberikan nuansa alami yang luar biasa.",
       name: "Siti Nurhaliza",
       position: "Pemilik Rumah, Bandung",
       rating: 5,

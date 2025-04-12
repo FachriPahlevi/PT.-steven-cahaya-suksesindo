@@ -81,9 +81,9 @@ const Gallery = () => {
               className={`relative rounded-xl overflow-hidden cursor-pointer group ${getSizeClasses(item.size)} ${item.color}`}
               onClick={() => setSelectedImage(item)}
             >
-              <div className="absolute inset-0 flex items-center justify-center">
-                <img src={`/img/Proyek/${index+1}.jpg`} className="text-5xl text-gray-400" />
-              </div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <img src={`/img/Proyek/${index+1}.jpg`} className="w-full h-full text-5xl text-gray-400 object-cover" />
+                </div>
               <div className="absolute inset-0 bg-red-600/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
                 <div className="text-center text-white transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
                   <div className="w-12 h-12 bg-white text-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
