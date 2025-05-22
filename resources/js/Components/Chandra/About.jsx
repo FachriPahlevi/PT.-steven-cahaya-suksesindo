@@ -1,103 +1,162 @@
-// components/About.jsx
-import React from 'react';
-import { Link } from 'react-scroll';
-import { FaGem, FaAward, FaHandHoldingHeart, FaTruckLoading } from 'react-icons/fa';
-import { motion } from 'framer-motion';
+import React from "react";
+import { Globe2, Ship, Trophy, Activity } from "lucide-react";
+import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const About = () => {
-  const features = [
+  const { t } = useTranslation();
+
+  const exportDestinations = [
     {
-      icon: <FaGem />,
-      title: 'Kualitas Premium',
-      description: 'Dipilih secara ketat untuk memastikan batu alam terbaik di kelasnya.',
+      country: t("about.exportDestinations.taiwan.country"),
+      flag: "🇹🇼",
+      desc: t("about.exportDestinations.taiwan.desc"),
+      achievement: t("about.exportDestinations.taiwan.achievement"),
+      stats: t("about.exportDestinations.taiwan.stats"),
     },
     {
-      icon: <FaAward />,
-      title: '15+ Tahun Pengalaman',
-      description: 'Melayani kebutuhan proyek kecil hingga berskala nasional sejak 2010.',
+      country: t("about.exportDestinations.australia.country"),
+      flag: "🇦🇺",
+      desc: t("about.exportDestinations.australia.desc"),
+      achievement: t("about.exportDestinations.australia.achievement"),
+      stats: t("about.exportDestinations.australia.stats"),
     },
     {
-      icon: <FaHandHoldingHeart />,
-      title: 'Fokus pada Kepuasan',
-      description: 'Kami hadir dengan pelayanan ramah, cepat, dan solutif.',
+      country: t("about.exportDestinations.singapore.country"),
+      flag: "🇸🇬",
+      desc: t("about.exportDestinations.singapore.desc"),
+      achievement: t("about.exportDestinations.singapore.achievement"),
+      stats: t("about.exportDestinations.singapore.stats"),
     },
     {
-      icon: <FaTruckLoading />,
-      title: 'Stok Selalu Tersedia',
-      description: 'Pengiriman cepat & aman ke seluruh wilayah Indonesia.',
+      country: t("about.exportDestinations.indonesia.country"),
+      flag: "🇮🇩",
+      desc: t("about.exportDestinations.indonesia.desc"),
+      achievement: t("about.exportDestinations.indonesia.achievement"),
+      stats: t("about.exportDestinations.indonesia.stats"),
+    },
+  ];
+
+  const achievements = [
+    {
+      icon: Globe2,
+      value: "3+",
+      text: t("about.achievements.countries"),
+    },
+    {
+      icon: Ship,
+      value: "2200+",
+      text: t("about.achievements.exportVolume"),
+    },
+    {
+      icon: Trophy,
+      value: "15+",
+      text: t("about.achievements.exportYears"),
     },
   ];
 
   return (
-    <section id="about" className="py-24 bg-white relative overflow-hidden">
-      <div className="absolute w-[300px] h-[300px] rounded-full bg-red-600/5 -top-[150px] -left-[100px]"></div>
-      
-      <div className="container mx-auto px-4 md:px-8">
-        <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Image */}
-          <motion.div 
-            initial={{ opacity: 0, x: -30 }}
+    <section className="py-24 bg-gradient-to-b from-gray-50 to-white overflow-hidden" id="about">
+      <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="relative"
+            transition={{ duration: 0.5 }}
           >
-            <div className="relative overflow-hidden rounded-2xl shadow-xl w-full bg-gray-200 aspect-square">
-              <img 
-                src="/img/About/about.jpg" 
-                alt="Batu Alam" 
-                className="w-full h-full object-cover"
-              />
+            <div className="space-y-8">
+              <div>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2 }}
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-50 text-red-600 font-medium mb-4"
+                >
+                  <Ship className="w-4 h-4" />
+                  {t("about.exporter")}
+                </motion.div>
+                <h2 className="text-4xl font-bold text-gray-900 mb-4">{t("about.title")}</h2>
+                <div className="h-1 w-20 bg-red-600 rounded-full mb-6"></div>
+                <p className="text-lg text-gray-600 leading-relaxed">
+  {t("about.introduction.full", {
+    year: 2010,
+    company: "PT. Steven Cahaya SuksesIndo",
+  })}
+</p>
+              </div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3 }}
+                className="bg-gradient-to-r from-red-600 to-red-500 p-8 rounded-2xl text-white"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <Activity className="w-6 h-6" />
+                  <h3 className="text-xl font-semibold">{t("about.achievements.title")}</h3>
+                </div>
+                <p className="text-lg leading-relaxed opacity-90">
+                  {t("about.exportPartnerTrust")}
+                </p>
+              </motion.div>
+
+              <div className="grid grid-cols-3 gap-6">
+                {achievements.map((stat, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.4 + index * 0.1 }}
+                    className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 text-center hover:shadow-xl transition-shadow"
+                  >
+                    <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-red-50 text-red-600 mb-4">
+                      <stat.icon className="w-6 h-6" />
+                    </div>
+                    <div className="font-bold text-2xl text-gray-900 mb-1">{stat.value}</div>
+                    <div className="text-sm text-gray-600">{stat.text}</div>
+                  </motion.div>
+                ))}
+              </div>
             </div>
-            <div className="absolute top-6 right-6 -z-10 w-full h-full border-4 border-amber-400 rounded-2xl"></div>
           </motion.div>
 
-          {/* Text Content */}
-          <motion.div 
-            initial={{ opacity: 0, x: 30 }}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.5 }}
+            className="relative"
           >
-            <h2 className="text-4xl font-bold font-playfair text-red-600 mb-8 relative pb-4 before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-20 before:h-1 before:bg-amber-400">
-              Tentang Kami
-            </h2>
-            
-            <p className="text-gray-600 mb-8">
-              <strong>PT. Steven Cahaya SuksesIndo</strong> adalah perusahaan pemasok dan distributor <strong>batu alam berkualitas tinggi</strong> di Indonesia. Berdiri sejak tahun 2010, kami telah dipercaya oleh ribuan klien dari berbagai sektor,  mulai dari pemilik hunian pribadi hingga kontraktor dan arsitek profesional di seluruh nusantara.
-            </p>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-              {features.map((feature, index) => (
-                <motion.div 
+            <div className="grid sm:grid-cols-2 gap-6">
+              {exportDestinations.map((item, index) => (
+                <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="flex items-start gap-4"
+                  transition={{ delay: 0.2 + index * 0.1 }}
+                  className="group relative bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all border border-gray-100 overflow-hidden"
                 >
-                  <div className="bg-red-600 text-white h-12 w-12 min-w-12 rounded-full flex items-center justify-center text-xl shadow-md">
-                    {feature.icon}
+                  <div className="absolute top-0 right-0 p-3 bg-gradient-to-l from-red-50 to-transparent text-red-600 text-sm font-medium">
+                    {item.stats}
                   </div>
-                  <div>
-                    <h5 className="font-semibold text-gray-800 mb-1">{feature.title}</h5>
-                    <p className="text-sm text-gray-600">{feature.description}</p>
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="text-4xl">{item.flag}</span>
+                    <h3 className="text-xl font-bold text-gray-900">{item.country}</h3>
                   </div>
+                  <p className="text-gray-600 mb-3">{item.desc}</p>
+                  <div className="flex items-center gap-2 text-sm text-red-600">
+                    <Trophy className="w-4 h-4" />
+                    {item.achievement}
+                  </div>
+                  <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-red-600 to-red-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                 </motion.div>
               ))}
             </div>
-
-            <Link
-              to="contact"
-              spy={true}
-              smooth={true}
-              offset={-80}
-              duration={500}
-              className="inline-block bg-red-600 hover:bg-red-700 text-white py-3 px-8 rounded-full font-medium transition-all shadow-lg shadow-red-600/20 hover:shadow-red-600/30 hover:-translate-y-1 duration-300"
-            >
-              Konsultasi Gratis Sekarang
-            </Link>
           </motion.div>
         </div>
       </div>

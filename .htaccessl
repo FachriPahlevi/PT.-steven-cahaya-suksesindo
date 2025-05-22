@@ -1,16 +1,7 @@
-<IfModule mod_rewrite.c>
-    RewriteEngine On
+# RewriteEngine on
+# RewriteCond %{REQUEST_URI} !^public
+# RewriteRule ^(.*)$ public/$1 [L]
 
-    # Redirect HTTP to HTTPS
-    RewriteCond %{HTTPS} off
-    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^ index.php [L]
-</IfModule>
-
-# PHP settings
 php_value upload_max_filesize 100M
 php_value post_max_size 120M
 php_value memory_limit 256M

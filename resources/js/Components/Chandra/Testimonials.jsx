@@ -1,114 +1,75 @@
-// Redesain komponen Testimonials dengan desain modern
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { FaQuoteRight, FaStar } from 'react-icons/fa';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { FaClipboardList, FaBox, FaFileInvoice, FaShippingFast } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 
-const Testimonials = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  
-  const testimonials = [
-    {
-      text: "Kualitas batu alam dari PT. Steven Cahaya SuksesIndo benar-benar premium. Proyek rumah kami terlihat sangat mewah dan elegan berkat sentuhan batu andesit pada bagian fasad.",
-      name: "Budi Santoso",
-      position: "Arsitek, Jakarta",
-      rating: 5,
-      image: null
-    },
-    {
-      text: "Sangat puas dengan layanan dan produk dari PT. Steven Cahaya SuksesIndo. Batu alam yang kami pesan untuk dinding belakang taman kami memberikan nuansa alami yang luar biasa.",
-      name: "Siti Nurhaliza",
-      position: "Pemilik Rumah, Bandung",
-      rating: 5,
-      image: null
-    },
-    {
-      text: "Sudah 5 tahun berlangganan untuk berbagai proyek hotel dan resort kami. Konsistensi kualitas dan ketersediaan stok menjadi alasan utama kami terus bekerja sama.",
-      name: "Hendry Wijaya",
-      position: "Kontraktor, Bali",
-      rating: 5,
-      image: null
-    }
-  ];
+const icons = [
+  <FaClipboardList size={24} className="text-white" />,
+  <FaFileInvoice size={24} className="text-white" />,
+  <FaBox size={24} className="text-white" />,
+  <FaShippingFast size={24} className="text-white" />,
+];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex((current) => (current === testimonials.length - 1 ? 0 : current + 1));
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [testimonials.length]);
+const colors = [
+  { color: 'bg-red-600', accent: 'border-red-600' },
+  { color: 'bg-yellow-400', accent: 'border-yellow-400' },
+  { color: 'bg-orange-500', accent: 'border-orange-500' },
+  { color: 'bg-blue-500', accent: 'border-blue-500' },
+];
+
+const HowWeExport = () => {
+  const { t } = useTranslation();
+  const steps = t('how_we_export.steps', { returnObjects: true });
 
   return (
-    <section className="py-24 bg-gradient-to-b from-white to-red-50 relative overflow-hidden">
-      <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-      
-      <motion.div 
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        className="container mx-auto px-4 md:px-8 relative z-10"
-      >
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold font-playfair text-red-600 mb-6">
-            Apa Kata Mereka?
-          </h2>
-          <div className="w-24 h-1 bg-amber-400 mx-auto mb-6"></div>
-          <p className="text-gray-600">
-            Testimoni dari pelanggan yang telah menggunakan produk dan layanan kami.
-          </p>
-        </div>
-
-        <div className="relative max-w-4xl mx-auto">
-          <AnimatePresence mode="wait">
+    <section className="max-w-7xl mx-auto px-4 py-16 font-sans">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+        {/* Kiri: Konten Card */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {steps.map((step, idx) => (
             <motion.div
-              key={activeIndex}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5 }}
-              className="bg-white rounded-2xl shadow-xl p-8 md:p-12"
+              key={idx}
+              whileHover={{ scale: 1.03 }}
+              transition={{ duration: 0.3 }}
+              className={`relative bg-white shadow-md rounded-2xl p-6 border-l-4 ${colors[idx].accent}`}
             >
-              <div className="flex flex-col items-center">
-                <div className="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mb-6">
-                  <FaQuoteRight className="text-red-600 text-2xl" />
-                </div>
-                
-                <div className="flex gap-1 mb-6">
-                  {[...Array(testimonials[activeIndex].rating)].map((_, i) => (
-                    <FaStar key={i} className="text-amber-400 text-xl" />
-                  ))}
-                </div>
-
-                <p className="text-xl md:text-2xl text-gray-800 text-center font-light italic mb-8">
-                  "{testimonials[activeIndex].text}"
-                </p>
-
-                <div className="text-center">
-                  <h4 className="font-semibold text-lg text-red-600 mb-1">
-                    {testimonials[activeIndex].name}
-                  </h4>
-                  <p className="text-gray-600">{testimonials[activeIndex].position}</p>
-                </div>
+              <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-4 ${colors[idx].color}`}>
+                {icons[idx]}
               </div>
+              <h3 className="text-lg font-semibold text-gray-800">{step.title}</h3>
+              <p className="text-sm text-gray-600 mt-2">{step.desc}</p>
+              {idx < steps.length - 1 && (
+                <div className="absolute right-[-20px] top-1/2 transform -translate-y-1/2 hidden sm:block">
+                  <div className="w-10 h-1 bg-gray-300"></div>
+                </div>
+              )}
             </motion.div>
-          </AnimatePresence>
-
-          <div className="flex justify-center mt-8 gap-3">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setActiveIndex(index)}
-                className={`w-12 h-2 rounded-full transition-all duration-300 ${
-                  index === activeIndex ? 'bg-red-600' : 'bg-red-200'
-                }`}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
-          </div>
+          ))}
         </div>
-      </motion.div>
+
+        {/* Kanan: Header */}
+        <div className="space-y-6">
+          <motion.h2
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl md:text-4xl font-bold text-gray-900 relative"
+          >
+            {t('how_we_export.title')}
+            <span className="block w-20 h-1 bg-gradient-to-r from-red-600 to-yellow-400 mt-2 rounded"></span>
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-gray-600 leading-relaxed"
+          >
+            {t('how_we_export.description')}
+          </motion.p>
+        </div>
+      </div>
     </section>
   );
 };
 
-export default Testimonials;
+export default HowWeExport;

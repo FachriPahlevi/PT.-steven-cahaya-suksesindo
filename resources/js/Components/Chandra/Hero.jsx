@@ -1,126 +1,77 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Star, Truck, Shield, ChevronDown } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { UserCheck } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const Hero = () => {
-  return (
-    <section className="min-h-screen bg-white relative overflow-hidden">
-      {/* Subtle Pattern Overlay */}
-      <div className="absolute inset-0 opacity-5 pattern-grid"></div>
+  const { t, i18n } = useTranslation(); // Use i18next hook for translations
 
-      <div className="container mx-auto px-4 py-20 relative">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left Content */}
+  return (
+    <section id="home" className="min-h-screen bg-white flex items-center overflow-hidden relative">
+      <div className="container mx-auto px-6 py-24 grid lg:grid-cols-2 gap-16 items-center">
+        {/* LEFT TEXT */}
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center lg:text-left"
+        >
+          <p className="text-red-600 font-semibold uppercase tracking-wide mb-4">
+            {t('hero.stone_for_interiors')}
+          </p>
+          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
+            {t('hero.bring_natural_luxury')} <span className="text-red-600">{t('hero.natural_luxury')}</span> {t('hero.to_every_corner_of_your_room')}
+          </h1>
+          <p className="text-gray-600 text-lg mb-10 max-w-md mx-auto lg:mx-0">
+            {t('hero.we_believe')} {t('hero.stone_is_not_just_material')} {t('hero.it_is_nature_s_artwork')} {t('hero.enriching_your_room_character')}
+          </p>
+          <div className="flex justify-center lg:justify-start">
+            <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-full font-medium flex items-center gap-2 shadow-md transition">
+              {t('hero.explore_our_products')}
+            </button>
+          </div>
+
+          {/* Testimonial Badge */}
+          <div className="mt-10 flex justify-center lg:justify-start">
+            <div className="bg-gray-100 px-6 py-3 rounded-xl shadow-inner text-sm text-gray-700 flex items-center gap-3">
+              <UserCheck className="w-8 h-8 rounded-full" />
+              <span>
+                {t('hero.trusted_500_clients')}
+              </span>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* RIGHT IMAGE */}
+        <motion.div
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          className="relative"
+        >
+          <div className="relative w-full aspect-square rounded-[2rem] overflow-hidden shadow-2xl border border-gray-100">
+            <img
+              src="/img/Hero/generate.png"
+              alt="Batu Alam"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-tr from-white/30 to-transparent"></div>
+          </div>
+
+          {/* Floating Info Card */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center lg:text-left"
+            transition={{ delay: 1.2 }}
+            className="absolute -bottom-6 left-6 bg-white p-4 rounded-2xl shadow-xl max-w-[220px] text-sm"
           >
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 bg-red-50 text-red-600 px-5 py-2.5 rounded-full mb-6"
-            >
-              <span className="inline-block w-2 h-2 rounded-full bg-red-600 animate-pulse"></span>
-              <span className="font-medium">Supplier Batu Alam Terpercaya</span>
-
-            </motion.div>
-
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6"
-            >
-              Wujudkan Ruang Elegan
-              <span className="text-red-600 block">dengan Batu Alam Berkualitas</span>
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-              className="text-gray-600 text-lg mb-10 max-w-xl mx-auto lg:mx-0"
-            >
-             Pilihan terbaik untuk kebutuhan batu alam berkualitas, tahan lama, dan estetik.
-
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
-              className="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start"
-            >
-              <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-full font-medium transition-all duration-300 shadow-lg hover:shadow-red-200 flex items-center justify-center gap-2 group">
-               Lihat Koleksi
-                <ChevronDown className="w-4 h-4 transform group-hover:rotate-90 transition-transform duration-300" />
-              </button>
-            </motion.div>
-
-            {/* Feature Icons */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.8 }}
-              className="mt-16 grid grid-cols-3 gap-8 max-w-md mx-auto lg:mx-0"
-            >
-              {[
-                { icon: Star, text: "Premium Quality" },
-                { icon: Truck, text: "Fast Delivery" },
-                { icon: Shield, text: "Guaranteed" }
-              ].map((item, index) => (
-                <div key={index} className="flex flex-col items-center gap-3 group">
-                  <div className="bg-red-50 p-4 rounded-full text-red-600 transition-all duration-300 group-hover:bg-red-600 group-hover:text-white">
-                    <item.icon className="w-6 h-6" />
-                  </div>
-                  <span className="text-gray-600 text-sm font-medium">{item.text}</span>
-                </div>
-              ))}
-            </motion.div>
+            <p className="font-semibold text-gray-800">{t('hero.natural_stone_100')}</p>
+            <p className="text-gray-500 mt-1">
+              {t('hero.processed_directly_from_mines')}
+            </p>
           </motion.div>
-
-          {/* Right Image Section */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1 }}
-            className="relative hidden lg:block"
-          >
-           <div className="aspect-square rounded-3xl overflow-hidden bg-red-100 relative">
-              {/* Overlay Gradient */}
-              <div className="absolute z-10"></div>
-
-              {/* Image */}
-              <img
-                src="/img/Hero/hero1.jpg" // Ganti ini dengan path gambar kamu
-                alt="Batu Alam"
-                className="w-full h-full object-cover"
-              />
-            </div>
-
-
-            {/* Floating Elements */}
-            <motion.div
-              initial={{ x: 20, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ delay: 1 }}
-              className="absolute -right-8 top-1/4 bg-white p-4 rounded-xl shadow-xl"
-            >
-            </motion.div>
-          </motion.div>
-        </div>
+        </motion.div>
       </div>
-
-      <style jsx>{`
-        .pattern-grid {
-          background-image: linear-gradient(90deg, rgba(0,0,0,.03) 1px, transparent 1px),
-                          linear-gradient(rgba(0,0,0,.03) 1px, transparent 1px);
-          background-size: 20px 20px;
-        }
-      `}</style>
     </section>
   );
 };

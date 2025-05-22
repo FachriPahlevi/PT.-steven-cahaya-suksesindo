@@ -1,0 +1,166 @@
+{
+    "header": {
+      "nav": {
+        "home": "Beranda",
+        "about": "Tentang Kami",
+        "products": "Produk",
+        "services": "Layanan",
+        "gallery": "Galeri"
+      },
+      "cta": "Hubungi Kami",
+      "company": {
+        "name": "PT. Steven Cahaya SuksesIndo",
+        "tagline": "Supplier Batu Alam"
+      }
+    },
+    "hero":{
+      "stone_for_interiors": "Batu Alam untuk Interior Impian",
+      "bring_natural_luxury": "Hadirkan Nuansa",
+      "natural_luxury": "Natural & Mewah",
+      "to_every_corner_of_your_room": "ke Setiap Sudut Ruangan Anda",
+      "we_believe": "Kami percaya",
+      "stone_is_not_just_material": "batu alam bukan sekadar material",
+      "it_is_nature_s_artwork": "adalah karya seni alam",
+      "enriching_your_room_character": "yang akan memperkaya karakter ruang Anda.",
+      "explore_our_products": "Jelajahi Produk Kami",
+      "trusted_500_clients": "Dipercaya 500+ klien interior & arsitektur",
+      "natural_stone_100": "✅ 100% Batu Alam",
+      "processed_directly_from_mines": "Diproses langsung dari tambang pilihan di Indonesia."
+    },
+      "about": {
+        "title": "Tentang Kami",
+        "exporter": "Eksportir Batu Alam Premium",
+        "exportDestinations": {
+          "taiwan": {
+            "country": "Taiwan",
+            "flag": "🇹🇼",
+            "desc": "Tujuan ekspor utama untuk kawasan Asia Timur",
+            "achievement": "Volume ekspor terbesar",
+            "stats": "500 ton/tahun"
+          },
+          "australia": {
+            "country": "Australia",
+            "flag": "🇦🇺",
+            "desc": "Pasar premium untuk batu alam berkualitas tinggi",
+            "achievement": "Mitra ekspor eksklusif",
+            "stats": "300 ton/tahun"
+          },
+          "singapore": {
+            "country": "Singapura",
+            "flag": "🇸🇬",
+            "desc": "Hub distribusi untuk Asia Tenggara",
+            "achievement": "Pertumbuhan ekspor tertinggi",
+            "stats": "400 ton/tahun"
+          },
+          "indonesia": {
+            "country": "Indonesia",
+            "flag": "🇮🇩",
+            "desc": "Basis produksi dan pasar domestik",
+            "achievement": "Sertifikasi mutu ekspor",
+            "stats": "1000 ton/tahun"
+          }
+        },
+        "achievements": {
+          "countries": "3+ Negara Tujuan Ekspor",
+          "exportVolume": "2200+ Ton Ekspor/Tahun",
+          "exportYears": "15+ Tahun Ekspor",
+          "title": "Pencapaian Ekspor"
+        },
+        "introduction": {
+        "full": "Berdiri sejak {{year}}, {{company}} adalah eksportir batu alam premium dengan jangkauan pasar internasional yang luas."
+        },
+        "exportPartnerTrust": "Dipercaya sebagai mitra ekspor utama oleh importir dari Taiwan 🇹🇼, Australia 🇦🇺, dan Singapura 🇸🇬"
+      },
+        "products": {
+  "title_catalog": "Katalog Produk Unggulan",
+  "title_all": "Semua Produk",
+  "description": "Berbagai pilihan produk unggulan kami.",
+  "see_all": "Lihat Semua",
+  "see_featured": "Lihat Unggulan",
+  "zoom": "Perbesar",
+  "close": "Tutup",
+  "product_1": "Produk 1",
+  "product_2": "Produk 2",
+  "product_3": "Produk 3",
+  "product_4": "Produk 4",
+  "product_5": "Produk 5",
+  "product_6": "Produk 6",
+  "product_7": "Produk 7",
+  "product_8": "Produk 8"
+},
+        "services": {
+          "badge": "Layanan Kami",
+          "headline": {
+            "part1": "Solusi Lengkap untuk Kebutuhan",
+            "highlight": "Batu Alam",
+            "part2": "Anda"
+          },
+          "description": "Kami menyediakan berbagai layanan profesional untuk memastikan kebutuhan batu alam Anda terpenuhi dengan sempurna.",
+          "items": {
+            "sale": {
+              "title": "Penjualan Batu Alam",
+              "description": "Kami menyediakan berbagai jenis batu alam berkualitas tinggi seperti batu andesit, palimanan, batu templek, batu candi, dan banyak lagi.",
+              "link": "Lihat Produk"
+            },
+            "delivery": {
+              "title": "Pengiriman Internasional",
+              "description": "Kami menyediakan layanan pengiriman cepat, aman, dan terpercaya ke seluruh wilayah Indonesia dengan armada yang terintegrasi.",
+              "link": "Cek Area Pengiriman"
+            },
+            "consultation": {
+              "title": "Konsultasi Proyek",
+              "description": "Tim ahli kami siap membantu Anda memilih material batu alam terbaik yang sesuai dengan kebutuhan spesifik proyek Anda.",
+              "link": "Konsultasi Gratis"
+            }
+          }
+        },
+          "gallery": {
+            "title": "Galeri Proyek Ekspor",
+            "subtitle": "Beberapa pengiriman internasional pilihan kami.",
+            "countries": {
+              "singapore": "Singapura",
+              "australia": "Australia",
+              "taiwan": "Taiwan"
+            }
+          },
+    "footer": {
+      "brand": "PT. Steven Cahaya SuksesIndo",
+      "description": "PT. Steven Cahaya SuksesIndo adalah perusahaan yang bergerak di bidang penjualan batu alam berkualitas tinggi untuk kebutuhan konstruksi dan dekorasi.",
+      "contact": "Kontak Kami",
+      "address": "Jl. Raya Domas Utara No.197, Kebondalem, Boteng, Kec. Menganti, Kabupaten Gresik, Jawa Timur 61174, Indonesia",
+      "phone": "+62 812 5222 3303",
+      "email": "steven_chandra88@yahoo.com",
+      "quickLinks": "Link Cepat",
+      "home": "Beranda",
+      "about": "Tentang Kami",
+      "products": "Produk",
+      "services": "Layanan",
+      "gallery": "Galeri",
+      "location": "Lokasi Kami",
+      "copyright": "&copy; {{year}} FachriDev | Fullstack Engineer. Building scalable & smart digital solutions."
+    },  
+      "how_we_export": {
+        "title": "Bagaimana Kami Mengekspor",
+        "description": "Proses ekspor kami terstruktur untuk memastikan produk sampai ke tangan pelanggan dengan aman dan efisien.",
+        "steps": [
+          {
+            "title": "Penerimaan Order",
+            "desc": "Kami menerima pesanan dan mengkonfirmasi detail kepada pelanggan."
+          },
+          {
+            "title": "Pembuatan Invoice",
+            "desc": "Invoice dibuat berdasarkan detail order dan dikirimkan ke pelanggan."
+          },
+          {
+            "title": "Pengemasan Produk",
+            "desc": "Produk dikemas dengan hati-hati untuk memastikan keamanan selama pengiriman."
+          },
+          {
+            "title": "Pengiriman",
+            "desc": "Produk dikirim ke pelanggan melalui jasa pengiriman terpercaya."
+          }
+        ]
+      }
+    
+  }
+  

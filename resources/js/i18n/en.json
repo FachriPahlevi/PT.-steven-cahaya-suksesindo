@@ -1,0 +1,164 @@
+{
+  "header": {
+    "nav": {
+      "home": "Home",
+      "about": "About Us",
+      "products": "Products",
+      "services": "Services",
+      "gallery": "Gallery"
+    },
+    "cta": "Contact Us",
+    "company": {
+      "name": "PT. Steven Cahaya SuksesIndo",
+      "tagline": "Natural Stone Supplier"
+    }
+  },
+  "hero": {
+    "stone_for_interiors": "Natural Stone for Dream Interiors",
+    "bring_natural_luxury": "Bring the ambiance",
+    "natural_luxury": "Natural & Luxurious",
+    "to_every_corner_of_your_room": "to every corner of your room",
+    "we_believe": "We believe",
+    "stone_is_not_just_material": "stone is not just material",
+    "it_is_nature_s_artwork": "it is nature's artwork",
+    "enriching_your_room_character": "that enriches your room's character.",
+    "explore_our_products": "Explore Our Products",
+    "trusted_500_clients": "Trusted by 500+ interior & architecture clients",
+    "natural_stone_100": "✅ 100% Natural Stone",
+    "processed_directly_from_mines": "Processed directly from selected mines in Indonesia."
+  },
+  "about": {
+    "title": "About Us",
+    "exporter": "Premium Natural Stone Exporter",
+    "exportDestinations": {
+      "taiwan": {
+        "country": "Taiwan",
+        "flag": "🇹🇼",
+        "desc": "Main export destination for East Asia",
+        "achievement": "Largest export volume",
+        "stats": "500 tons/year"
+      },
+      "australia": {
+        "country": "Australia",
+        "flag": "🇦🇺",
+        "desc": "Premium market for high-quality natural stone",
+        "achievement": "Exclusive export partner",
+        "stats": "300 tons/year"
+      },
+      "singapore": {
+        "country": "Singapore",
+        "flag": "🇸🇬",
+        "desc": "Distribution hub for Southeast Asia",
+        "achievement": "Highest export growth",
+        "stats": "400 tons/year"
+      },
+      "indonesia": {
+        "country": "Indonesia",
+        "flag": "🇮🇩",
+        "desc": "Production base and domestic market",
+        "achievement": "Export quality certification",
+        "stats": "1000 tons/year"
+      }
+    },
+    "achievements": {
+      "countries": "3+ Export Destinations",
+      "exportVolume": "2200+ Tons Exported/Year",
+      "exportYears": "15+ Years of Export",
+      "title": "Export Achievement"
+    },
+    "introduction": {
+    "full": "Established in {{year}}, {{company}} is a premium natural stone exporter with a broad international market reach."
+  },
+    "exportPartnerTrust": "Trusted as a key export partner by importers from Taiwan 🇹🇼, Australia 🇦🇺, and Singapore 🇸🇬"
+  },
+    "products": {
+  "title_catalog": "Featured Product Catalog",
+  "title_all": "All Products",
+  "description": "Our wide selection of featured products.",
+  "see_all": "See All",
+  "see_featured": "See Featured",
+  "zoom": "Zoom",
+  "close": "Close",
+  "product_1": "Product 1",
+  "product_2": "Product 2",
+  "product_3": "Product 3",
+  "product_4": "Product 4",
+  "product_5": "Product 5",
+  "product_6": "Product 6",
+  "product_7": "Product 7",
+  "product_8": "Product 8"
+},
+    "services": {
+      "badge": "Our Services",
+      "headline": {
+        "part1": "Complete Solutions for Your",
+        "highlight": "Natural Stone",
+        "part2": "Needs"
+      },
+      "description": "We offer a range of professional services to ensure your natural stone needs are met perfectly.",
+      "items": {
+        "sale": {
+          "title": "Natural Stone Sales",
+          "description": "We provide various high-quality natural stones such as andesite, palimanan, slate, templek, lava stones, and more.",
+          "link": "View Products"
+        },
+        "delivery": {
+          "title": "International Delivery",
+          "description": "We offer fast, secure, and reliable shipping services across Indonesia with an integrated fleet.",
+          "link": "Check Delivery Areas"
+        },
+        "consultation": {
+          "title": "Project Consultation",
+          "description": "Our expert team is ready to assist you in selecting the best natural stone materials tailored to your specific project needs.",
+          "link": "Free Consultation"
+        }
+      }
+    },
+      "gallery": {
+        "title": "Export Project Showcase",
+        "subtitle": "Some of our selected international shipments.",
+        "countries": {
+          "singapore": "Singapore",
+          "australia": "Australia",
+          "taiwan": "Taiwan"
+        }
+      },
+    "footer": {
+      "brand": "PT. Steven Cahaya SuksesIndo",
+      "description": "PT. Steven Cahaya SuksesIndo is a company engaged in the sale of high-quality natural stone for construction and decoration needs.",
+      "contact": "Contact Us",
+      "address": "Jl. Raya Domas Utara No.197, Kebondalem, Boteng, Kec. Menganti, Kabupaten Gresik, Jawa Timur 61174, Indonesia",
+      "phone": "+62 812 5222 3303",
+      "email": "steven_chandra88@yahoo.com",
+      "quickLinks": "Quick Links",
+      "home": "Home",
+      "about": "About Us",
+      "products": "Products",
+      "services": "Services",
+      "gallery": "Gallery",
+      "location": "Our Location",
+      "copyright": "&copy; {{year}} FachriDev | Fullstack Engineer. Building scalable & smart digital solutions."
+    },  
+      "how_we_export": {
+        "title": "How We Export",
+        "description": "Our export process is structured to ensure products reach customers safely and efficiently.",
+        "steps": [
+          {
+            "title": "Order Reception",
+            "desc": "We receive the order and confirm the details with the customer."
+          },
+          {
+            "title": "Invoice Creation",
+            "desc": "The invoice is created based on the order details and sent to the customer."
+          },
+          {
+            "title": "Product Packaging",
+            "desc": "The product is carefully packaged to ensure safety during shipment."
+          },
+          {
+            "title": "Delivery",
+            "desc": "Products are delivered to customers via trusted shipping services."
+          }
+        ]
+      }    
+}
