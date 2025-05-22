@@ -11,7 +11,11 @@
       "company": {
         "name": "PT. Steven Cahaya SuksesIndo",
         "tagline": "Supplier Batu Alam"
-      }
+      },
+      
+     "language": {
+      "title": "Bahasa"
+    }
     },
     "hero":{
       "stone_for_interiors": "Batu Alam untuk Interior Impian",

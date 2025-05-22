@@ -23,9 +23,30 @@ const HowWeExport = () => {
 
   return (
     <section className="max-w-7xl mx-auto px-4 py-16 font-sans">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-        {/* Kiri: Konten Card */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div className="flex flex-col md:grid md:grid-cols-2 gap-12 items-start">
+        {/* Header di mobile dulu (order-1), tapi di md jadi order-2 (kanan) */}
+        <div className="space-y-6 order-1 md:order-2">
+          <motion.h2
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl md:text-4xl font-bold text-gray-900 relative"
+          >
+            {t('how_we_export.title')}
+            <span className="block w-20 h-1 bg-gradient-to-r from-red-600 to-yellow-400 mt-2 rounded"></span>
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-gray-600 leading-relaxed"
+          >
+            {t('how_we_export.description')}
+          </motion.p>
+        </div>
+
+        {/* Cards di mobile bawah header (order-2), tapi di md jadi order-1 (kiri) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 order-2 md:order-1">
           {steps.map((step, idx) => (
             <motion.div
               key={idx}
@@ -45,27 +66,6 @@ const HowWeExport = () => {
               )}
             </motion.div>
           ))}
-        </div>
-
-        {/* Kanan: Header */}
-        <div className="space-y-6">
-          <motion.h2
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-3xl md:text-4xl font-bold text-gray-900 relative"
-          >
-            {t('how_we_export.title')}
-            <span className="block w-20 h-1 bg-gradient-to-r from-red-600 to-yellow-400 mt-2 rounded"></span>
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-gray-600 leading-relaxed"
-          >
-            {t('how_we_export.description')}
-          </motion.p>
         </div>
       </div>
     </section>
